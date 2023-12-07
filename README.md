@@ -26,7 +26,7 @@ Install dependencies needed for ArduPilot:
 ```bash
 sudo apt install -y git python3-dev python3-opencv python3-wxgtk4.0 libxml2-dev
 ```
-### 4. Build ArduPilot (Optional):
+### 4. Build ArduPilot for a specific flight controller (Optional):
 Build ArduPilot using the following commands:
 
 Note: 
