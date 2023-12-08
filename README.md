@@ -184,6 +184,14 @@ If you encounter further issues during the configuration or build process, caref
 
 If you face additional difficulties, feel free to share the error messages, and I'll do my best to assist you further.
 
+## Reference
+This guide should help you install ArduPilot, MAVProxy. Make sure to refer to the official documentation for any updates or additional configuration steps:
+
+[ArduPilot Documentation](https://ardupilot.org/ardupilot/)
+
+[MAVProxy Documentation](https://ardupilot.org/mavproxy/)
+
+[Installing Ardupilot and MAVProxy](https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/Installing_Ardupilot.md)
 
 ## Contributing
 
