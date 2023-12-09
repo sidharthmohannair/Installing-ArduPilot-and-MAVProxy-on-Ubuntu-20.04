@@ -125,11 +125,14 @@ Now, the specified directories are included in your PATH, making it convenient t
 mavproxy.py --master tcp:127.0.0.1:5760 --out udp:127.0.0.1:14550 --out udp:127.0.0.1:14551
 ```
 ### Run SITL (Software In The Loop) once to set params:
+
+Open a terminal and navigate to the ArduCopter directory in your ardupilot folder:
+
 ```bash
 cd ~/ardupilot/ArduCopter
-sim_vehicle.py -w
+simsim_vehicle.py -w_vehicle.py -w
 ```
-
+This should start the simulation with the specified vehicle type. Adjust the vehicle type as needed for your simulation.
 
 ## Handling the errors while configuring the flight controllers
 
