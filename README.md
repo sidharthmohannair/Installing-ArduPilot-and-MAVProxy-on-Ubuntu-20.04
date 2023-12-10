@@ -119,20 +119,43 @@ This command "sources" the ~/.bashrc file, making the changes take effect in the
 
 Now, the specified directories are included in your PATH, making it convenient to run ArduPilot commands from any directory in the terminal.
 
+# Run SITL & MAVProxy
 
-### Step 3: Run MAVProxy
-```bash
-mavproxy.py --master tcp:127.0.0.1:5760 --out udp:127.0.0.1:14550 --out udp:127.0.0.1:14551
-```
-### Run SITL (Software In The Loop) once to set params:
-
-Open a terminal and navigate to the ArduCopter directory in your ardupilot folder:
+### 1. Run SITL (Software In The Loop) to Set Parameters:
+Open a terminal and navigate to the ArduCopter directory within your ArduPilot folder:
 
 ```bash
 cd ~/ardupilot/ArduCopter
-simsim_vehicle.py -w_vehicle.py -w
 ```
-This should start the simulation with the specified vehicle type. Adjust the vehicle type as needed for your simulation.
+Start the simulation with the specified vehicle type. Adjust the vehicle type as needed for your simulation:
+
+```bash
+sim_vehicle.py -v ArduCopter -w --console
+```
+This command initializes the Software In The Loop (SITL) simulation with the specified ArduCopter vehicle type. It allows you to set parameters and perform testing in a simulated environment.
+
+### 2. Run MAVProxy to Interface with SITL:
+
+Open a new terminal window.
+
+Run MAVProxy to establish communication with the SITL instance:
+
+```bash
+mavproxy.py --master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14550 --out 127.0.0.1:14551
+```
+`--master tcp:127.0.0.1:5760`: Specifies the connection to the SITL instance.
+
+`--sitl 127.0.0.1:5501`: Specifies the SITL location.
+
+`--out 127.0.0.1:14550 --out 127.0.0.1:14551`: Specifies output ports for communication.
+
+`--console`: Opens the MAVProxy console for interaction.
+
+This command establishes a MAVLink connection between MAVProxy and the SITL instance, allowing you to monitor and control the simulated vehicle. The --console option opens an interactive console for sending MAVLink commands.
+
+Ensure that the SITL simulation is running before starting MAVProxy. The provided commands assume that your ArduCopter directory and simulation settings are correctly configured.
+
+### Further testing commands and guidelines will be added soon...
 
 ## Handling the errors while configuring the flight controllers
 
