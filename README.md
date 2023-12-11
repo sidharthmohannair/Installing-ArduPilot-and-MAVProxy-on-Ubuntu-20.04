@@ -130,7 +130,7 @@ cd ~/ardupilot/ArduCopter
 Start the simulation with the specified vehicle type. Adjust the vehicle type as needed for your simulation:
 
 ```bash
-sim_vehicle.py -v ArduCopter -w --console
+sim_vehicle.py -v ArduCopter -w --console --map
 ```
 This command initializes the Software In The Loop (SITL) simulation with the specified ArduCopter vehicle type. It allows you to set parameters and perform testing in a simulated environment.
 
@@ -153,6 +153,10 @@ mavproxy.py --master tcp:127.0.0.1:5760 --sitl 127.0.0.1:5501 --out 127.0.0.1:14
 
 This command establishes a MAVLink connection between MAVProxy and the SITL instance, allowing you to monitor and control the simulated vehicle. The --console option opens an interactive console for sending MAVLink commands.
 
+![Output Screenshot](images/2_Output_map_console.png)
+
+  #### If everything works well, then it should looks like this. :) 
+
 Ensure that the SITL simulation is running before starting MAVProxy. The provided commands assume that your ArduCopter directory and simulation settings are correctly configured.
 
 ### Further testing commands and guidelines will be added soon...
@@ -161,7 +165,7 @@ Ensure that the SITL simulation is running before starting MAVProxy. The provide
 
 #### error: Could not find the program ['arm-none-eabi-ar']
 
-![Alt text](images/1_cubeorange_error.png)
+![error: Could not find the program 'arm-none-eabi-ar'](images/1_cubeorange_error.png)
 
 The error message indicates that the arm-none-eabi-ar program is not found, which is part of the ARM toolchain needed for building ArduPilot. Let's address this by installing the necessary toolchain.
 
