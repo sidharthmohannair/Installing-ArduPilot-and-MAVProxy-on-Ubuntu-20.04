@@ -221,6 +221,8 @@ This guide should help you install ArduPilot, MAVProxy. Make sure to refer to th
 
 [MAVProxy Documentation](https://ardupilot.org/mavproxy/)
 
+[Ardupilot Wiki](https://github.com/ArduPilot/ardupilot_wiki/blob/master/mavproxy/source/docs/getting_started/starting.rst) 
+
 [Installing Ardupilot and MAVProxy](https://github.com/Intelligent-Quads/iq_tutorials/blob/master/docs/Installing_Ardupilot.md)
 
 ## Contributing
