@@ -163,7 +163,7 @@ Ensure that the SITL simulation is running before starting MAVProxy. The provide
 
 ## Handling the errors while configuring the flight controllers
 
-#### error: Could not find the program ['arm-none-eabi-ar']
+### Error 1: Could not find the program ['arm-none-eabi-ar']
 
 ![error: Could not find the program 'arm-none-eabi-ar'](images/1_cubeorange_error.png)
 
@@ -211,6 +211,31 @@ After installing these packages, attempt the ./waf configure --board CubeBlack c
 #### Note
 
 If you encounter further issues during the configuration or build process, carefully review the error messages. They often provide insights into missing dependencies or required packages.
+
+### Error 2: bad interpreter: No such file or directory
+```bash
+sidharth@asus:~/ardupilot$ ./waf configure --board CubeOrange
+./waf: /usr/bin/python: bad interpreter: No such file or directory
+sidharth@asus:~/ardupilot$ ./waf list_boards
+./waf: /usr/bin/python: bad interpreter: No such file or directory
+```
+The error `bad interpreter: No such file or directory` typically indicates that the Python interpreter specified in the shebang line of the script is not found in the specified path. In this case, it looks like the python executable is not found in `/usr/bin/python`.
+
+To resolve this issue, you can follow these steps:
+
+#### Check Python Version:
+
+Open a terminal and check the version of Python installed on your system by running:
+
+```bash
+python --version
+``` 
+
+If you have Python 3 installed and want to use it instead of Python 2, you can create a symlink from `python` to `python3`. Run the following commands:
+
+```bash
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
 
 If you face additional difficulties, feel free to share the error messages, and I'll do my best to assist you further.
 
