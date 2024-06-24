@@ -26,6 +26,8 @@ git submodule update --init --recursive
 Install dependencies needed for ArduPilot:
 
 ```bash
+sudo apt install python-matplotlib python-serial python-wxgtk3.0 python-wxtools python-lxml python-scipy python-opencv ccache gawk python-pip python-pexpect
+
 sudo apt install -y git python3-dev python3-opencv python3-wxgtk4.0 libxml2-dev
 ```
 ### 4. Build ArduPilot for a specific flight controller (Optional):
