@@ -161,7 +161,15 @@ This command establishes a MAVLink connection between MAVProxy and the SITL inst
 
 Ensure that the SITL simulation is running before starting MAVProxy. The provided commands assume that your ArduCopter directory and simulation settings are correctly configured.
 
-### Further testing commands and guidelines will be added soon...
+
+# MAVProxy Commands and Examples
+
+MAVProxy commands, ensure you have completed the above steps.
+
+Below is a guide on common MAVProxy commands and examples on how to use them effectively.
+
+[MAVProxy Commands and Examples](https://github.com/sidharthmohannair/MAVproxy-examples)
+
 
 ## Handling the errors while configuring the flight controllers
 
